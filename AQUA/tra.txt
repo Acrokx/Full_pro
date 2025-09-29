@@ -1,0 +1,162 @@
+Taller de investigación 
+
+📝 TypeScript y POO
+
+1.	Punto 2. ¿Qué ventajas ofrece TypeScript para trabajar con Programación Orientada a Objetos?
+TypeScript mejora la programación orientada a objetos (POO) ofreciendo tipado estático para detectar errores temprano, mejorando la mantenibilidad y escalabilidad de los proyectos gracias a características como clases e interfaces que estructuran el código. Además, el soporté mejorado de herramientas como IntelliSense y el autocompletado en los IDEs aumentan la productividad del desarrollador, haciendo que el desarrollador de aplicaciones complejas sea más eficiente y robusto.
+Ventajas clave de TypeScript para POO
+-	Tipado Estático: permite definir tipos para variables, funciones y propiedades de clases, lo que ayuda a detectar errores en tiempo de compilación, no en tiempo de ejecución y a crear código más fiable.
+
+-	Detección temprana de errores: al especificar tipos, TypeScript atrapa errores relacionados con los tipos antes de que el código llegue a producción, reduciendo así el bug y da fiabilidad.
+
+-	Mejora la mantenibilidad: El uso de clases, interfaces y otras características POO en TypeScript crea código mas claro, organizado y fácil de entender, especialmente en proyectos de gran escala.
+
+-	Escalabilidad y Estructura: Las interfaces proporcionan “contratos” que definen la estructura de los objetos, lo que permite crear aplicaciones modulares y fáciles de escalar, adaptándose bien a proyectos complejos.
+
+-	Soporte de Herramientas: Las anotaciones de tipo permiten que las herramientas de los editores (IDE) ofrezcan funciones avanzadas como autocompletado, IntelliSense y refactorización, incrementando la productividad del desarrollador.
+
+-	Legibilidad y auto documentación: El código con tipos es más fácil de leer y comprender, funcionando con documentación integrada que ayuda a los desarrolladores a entender como fluyen los datos en la aplicación.
+
+-	Compatibilidad con JavaScript: TypeScript es un super conjunto de JavaScript, lo que significa que cualquier código JavaScript valido también es código TypeScript valido. Esto permite una migración gradual de proyectos existentes.
+
+
+
+
+
+2.	Punto 4. ¿Qué es un readonly y para qué se usa?
+-	Un readonly es un modificador en programación y un atributo en HTML que especifica que un valor no puede ser cambiado después de su inicialización. Se utiliza para proteger la integridad de los datos al permitir que se les asigne un valor una vez, ya sea en su declaración o dentro de un constructor, pero impidiendo cualquier reasignación posterior. Esto es útil para asegurar que ciertas variables o campos no sean modificados, accidentalmente manteniendo la consistencia y la previsibilidad del código o la interfaz.
+
+Usos comunes:
+•	Programación (C#, TypeScript, etc.):
+Para declarar variables o campos que solo pueden asignarse una vez.
+•	Desarrollo Web (HTML):
+El atributo readonly en elementos <input> impide que el usuario modifique el valor de un campo de entrada.
+•	Bases de Datos:
+La cláusula FOR READ ONLY puede hacer que una tabla o cursor resultante no sea modificable.
+3.	Punto 6. ¿Qué son los constructores y para qué sirven?
+-	En la programación orientada a objetos (POO) con TypeScript, un constructor es un método especial que se llama automáticamente al crear una nueva instancia (un objeto) de una clase. Su función principal es inicializar las propiedades del objeto, estableciendo su estado inicial para que esté listo para usarse. Los constructores son fundamentales para crear y configurar objetos de forma organizada, ahorrando líneas de código y proporcionando un mecanismo para definir los valores requeridos de un objeto al instante de su creación.
+
+¿Para qué sirven los constructores en TypeScript?
+
+-	Inicializar propiedades:
+Establecen los valores iniciales de los atributos de un objeto cuando este se crea.
+
+-	Configurar objetos:
+Permiten definir las características y comportamientos específicos de un objeto al momento de su instanciación.
+
+-	Asegurar valores iniciales:
+Garantizan que un objeto tenga los datos necesarios y en un estado válido desde el principio.
+
+-	Simplificar la creación de objetos:
+Hacen que el proceso de crear objetos sea más eficiente al automatizar la asignación de propiedades.
+
+
+
+-	Promover la organización del código:
+-	Ayudan a mantener un código más limpio y fácil de mantener, ya que la inicialización está centralizada en un único lugar.
+
+
+4.	Punto 8. ¿Qué significa polimorfismo en el contexto de TS?
+el polimorfismo es la capacidad de tratar objetos de diferentes clases como si fueran de una superclase común, permitiendo que cada uno responda a un mismo método de manera única. Esto significa que puedes invocar un mismo "mensaje" o método en objetos de tipos distintos y cada objeto lo ejecutará de forma específica según su propia implementación, lo que resulta en un código más flexible, reutilizable y extensible.
+¿Cómo funciona?
+•	Herencia:
+El polimorfismo se logra comúnmente a través de la herencia, donde una subclase hereda propiedades y métodos de una superclase y los puede sobrescribir con su propia implementación.
+•	Interfaces:
+También se puede implementar usando interfaces, que definen un conjunto de métodos que las clases deben implementar, permitiendo que objetos de diferentes clases cumplan con el mismo "contrato" de interfaz.
+Ejemplo práctico
+Imagina una superclase Animal con un método hacerSonido ().
+•	Una clase Perro que hereda de Animal podría implementar hacerSonido () como "¡Guau!".
+•	Una clase Gato que también hereda de Animal implementaría hacerSonido () como "¡Miau!".
+Si tienes una función que acepta un Animal, puedes pasarle un objeto Perro o un Gato, y la función llamará al método hacerSonido () del objeto correcto en cada caso, sin necesidad de saber el tipo específico en el momento de la llamada.
+Beneficios en TypeScript
+•	Reutilización de código:
+Puedes escribir funciones y clases que operen con objetos de una superclase o interfaz común, reutilizando la lógica sin importar el tipo concreto.
+
+•	Flexibilidad y extensibilidad:
+Es fácil añadir nuevas clases que se adapten a la interfaz común, extendiendo la funcionalidad del sistema sin modificar el código existente.
+•	Abstracción:
+El polimorfismo permite abstraer los detalles de implementación, trabajando con una interfaz más general para gestionar colecciones de objetos diversos.
+
+Punto 10. ¿Qué es una interface en TS y en qué se diferencia de una clase abstracta?
+una interface define la estructura y los contratos de los objetos, especificando qué propiedades y métodos deben tener, mientras que una clase abstracta es un modelo que no se puede instanciar directamente y puede contener tanto métodos abstractos como implementados, compartiendo código y funcionalidades con sus clases derivadas. La diferencia principal es que las interfaces solo definen la "forma" y los contratos (qué hacer), sin proporcionar ninguna implementación, mientras que las clases abstractas pueden ofrecer implementaciones concretas y comparten una jerarquía de herencia más cercana.
+Interface en TypeScript
+•	Define un Contrato:
+Una interface es un conjunto de declaraciones de métodos abstractos y propiedades que una clase debe seguir para ser considerada "de ese tipo".
+•	Sin Implementación:
+Las interfaces solo describen la estructura (cómo debe verse un objeto), no cómo funcionarán sus miembros; no tienen implementaciones ni constructores.
+•	Herencia Múltiple:
+Una clase puede implementar múltiples interfaces, lo que permite un diseño más flexible y la conexión de clases sin relación jerárquica.
+•	Uso:
+Se utiliza para definir tipos complejos, asegurar la consistencia y promover la abstracción.
+Clase Abstracta
+•	Modelo Base:
+Es una clase que no puede ser instanciada directamente; existe solo como una base para otras clases.
+
+
+
+•	Métodos Concretos y Abstractos:
+Puede incluir tanto métodos abstractos (sin implementación) que deben ser implementados por las clases derivadas, como métodos concretos con su propio código o estado.
+•	Herencia Simple:
+Las clases pueden heredar solo de una clase abstracta, a diferencia de las interfaces.
+•	Compartir Código:
+Permite compartir código y funcionalidades comunes entre clases que están relacionadas y pertenecen a una misma jerarquía.
+Diferencias Clave
+•	Implementación:
+Las clases abstractas pueden tener métodos con implementaciones (código), mientras que las interfaces solo declaran métodos.
+•	Estado:
+Las clases abstractas pueden incluir estado (miembros y propiedades con valores), pero las interfaces no.
+•	Propósito:
+Las interfaces se usan para definir un contrato independiente para múltiples clases que pueden no tener nada en común, mientras que las clases abstractas conectan clases muy relacionadas.
+
+Punto número 12: Investigar y realizar la configuración de TypeScript con Node JS y VS Code.
+Para configurar TypeScript en un proyecto de Node.js con VS Code, primero instala Node.js y VS Code. Luego, en tu terminal, inicializa un proyecto de Node.js con npm init -y y instala el compilador de TypeScript globalmente con npm install -g typescript o localmente como dependencia de desarrollo con npm install --save-dev typescript. A continuación, crea un archivo tsconfig.json ejecutando tsc --init para configurar las opciones del compilador y, finalmente, abre tu proyecto en VS Code, escribe código TypeScript y usa el compilador (tsc) o el botón de compilación (Ctrl+Shift+B) para generar el JavaScript y depurar tu aplicación.
+1. Requisitos Previos
+•	Instala Node.js: Descarga e instala la versión adecuada de Node.js desde la página oficial para tu sistema operativo. Verifica la instalación abriendo tu terminal y escribiendo node -v.
+•	Instala Visual Studio Code: Si no lo tienes, descárgalo desde Visual Studio Code e instálalo.
+2. Inicializa tu Proyecto Node.js
+1.	Abre la terminal: en tu sistema operativo o directamente en VS Code (Ver > Nueva Terminal).
+2.	Crea un directorio: para tu proyecto (si es necesario) y entra en él.
+Código
+mkdir mi-proyecto-ts
+    cd mi-proyecto-ts
+1.	Inicializa el proyecto: con npm init y acepta los valores por defecto con la opción -y.
+Código
+npm init -y
+3. Instala el Compilador de TypeScript
+1.	Instala TypeScript: como una dependencia de desarrollo:
+Código
+npm install --save-dev typescript
+Esto agrega el compilador tsc a tu proyecto.
+4. Crea el Archivo de Configuración de TypeScript (tsconfig.json)
+1.	Genera un archivo tsconfig.json: En la raíz de tu proyecto, ejecuta el comando tsc --init. Esto crea el archivo tsconfig.json, que contiene todas las opciones de configuración del compilador de TypeScript.
+Código
+npx tsc --init
+5. Escribe y Compila tu Código TypeScript
+1.	Crea un archivo TypeScript: Por ejemplo, src/index.ts.
+2.	Escribe tu código: Define una función o una variable en TypeScript.
+
+TypeScript
+// src/index.ts
+    function saludar(nombre: string) {
+      console.log(`Hola, ${nombre}!`);
+    }
+
+    saludar("Mundo");
+1.	Compila el código:
+o	Desde la terminal: Ejecuta el comando npx tsc para compilar todos los archivos .ts a .js. Los archivos JavaScript se generarán en un directorio llamado dist por defecto (puedes cambiar esto en tsconfig.json).
+o	Desde VS Code: Presiona Ctrl+Shift+B (Windows/Linux) o Cmd+Shift+B (macOS) para que VS Code compile el proyecto usando el archivo tsconfig.json que configuraste.
+6. Ejecuta tu Aplicación Node.js
+1.	Ejecuta el archivo JavaScript generado: con Node.js:
+Código
+node dist/index.js
+Verás la salida del código compilado.
+7. Configura la Depuración (Opcional)
+1.	Abre el panel de depuración: en VS Code (icono del panel de depuración en la barra lateral).
+2.	Crea un archivo de configuración de lanzamiento (launch.json): Haz clic en "create a launch.json file" y selecciona "Node.js" como entorno.
+3.	Configura el punto de entrada: En el archivo launch.json, asegúrate de que la opción program apunte a tu archivo JavaScript de salida (ej. "${workspaceFolder}/dist/index.js").
+
+
+
+
+
+
